@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "My Cric API",
+    "short_name": "CricAPI",
+    "version": "1.0",
+    "description": "A Chrome extension using React and Vite",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
